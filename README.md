@@ -1,1 +1,2 @@
-# lab-2-dilara-juan
+# FurnitureStoreStart
+The start project for a Furniture store
