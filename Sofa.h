@@ -3,18 +3,35 @@
 class Sofa : public Furniture {
 private:
     // Attributes specific to Sofa class
-    int numOfSeats;             // Number of seats that the sofa has
+    int numOfSofaSeats;             // Number of seats that the sofa has
     std::string styleOfSofa;    // The sofa's style
-    bool convertible;           // Whether it can convert into a bed or not
-    std::string frameMaterial;  // Type of material used for the frame
+    bool sofaConvertible;           // Whether it can convert into a bed or not
+    std::string sofaFrameMaterial;  // Type of material used for the frame
 
 public:
-    Sofa(std::string n, double p, int q, int seats)
-        : Furniture(n, p, q), numOfSeats(seats) {}
-    int getNumOfSeats() const { return numOfSeats; }
-    void setNumOfSeats(int seats) { numOfSeats = seats; }
+    // Constructor
+    Sofa(std::string n, double p, int q, int seats, std::string style, bool isConvertible, std::string frameMaterial)
+        : Furniture(n, p, q), numOfSofaSeats(seats), styleOfSofa(style), sofaConvertible(isConvertible), sofaFrameMaterial(frameMaterial) {}
+    
+    // Getter and setter methods
+    int getNumOfSofaSeats() const { return numOfSofaSeats; }
+    void setNumOfSofaSeats(int seats) { numOfSofaSeats = seats; }
+
+    std::string getStyleOfSofa() const { return styleOfSofa; }
+    void setStyleOfSoda(const std::string& style) { styleOfSofa = style; }
+
+    bool getisConvertible() const { return sofaConvertible; }
+    void setConvertible(bool isConvertible) { sofaConvertible = isConvertible; }
+
+    std::string getSofaFrameMaterial() const { return sofaFrameMaterial; }
+    void setSofaFrameMaterial(const std::string& frameMaterial) { sofaFrameMaterial = frameMaterial; }
+
+    // Display method
     void display() const override {
         Furniture::display();
-        std::cout << "Number of Seats: " << numOfSeats << std::endl;
+        std::cout << "Number of Sofa Seats: " << numOfSofaSeats << std::endl;
+        std::cout << "Style of Sofa: " << styleOfSofa << std::endl;
+        std::cout << "Sofa Convertible: " << sofaConvertible << std::endl;
+        std::cout << "Sofa Frame Material: " << sofaFrameMaterial << std::endl;
     }
 };

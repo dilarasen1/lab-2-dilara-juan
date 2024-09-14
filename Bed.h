@@ -2,7 +2,8 @@
 
 class Bed : public Furniture {
 private:
-    int numOfSeats;
+    // Attributes specific to Bed class
+    int numOfSeats;//delete this
     std::string bedSize;            // Size of the bed
     std::string bedFrameMaterial;   // Material that the frame is made out of
     std::string bedStyle;           // Style of the bed

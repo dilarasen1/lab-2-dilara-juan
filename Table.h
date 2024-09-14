@@ -2,6 +2,7 @@
 
 class Table : public Furniture {
 private:
+    // Attributes specific to Table class
     int numOfLegs;          // Number of legs that it has
     bool foldable;          // Whether it can be folded or not
     std::string material;   // Material it is made out of
