@@ -5,7 +5,7 @@ private:
     int numOfLegs;          // Number of legs that it has
     bool foldable;          // Whether it can be folded or not
     std::string material;   // Material it is made out of
-    int numOfChairs;         // Number of chairs that can fit
+    int numOfChairs;        // Number of chairs that can fit
 
 public:
     Table(std::string n, double p, int q, int legs)

@@ -3,6 +3,11 @@
 class Bed : public Furniture {
 private:
     int numOfSeats;
+    std::string bedSize;            // Size of the bed
+    std::string bedFrameMaterial;   // Material that the frame is made out of
+    std::string bedStyle;           // Style of the bed
+    bool bedStorage;                // Whether it has storage or not
+    std::string bedColor;           // Color of the bed frame
 
 public:
     Bed(std::string n, double p, int q, int seats)
