@@ -20,8 +20,8 @@ public:
     std::string getStyleOfSofa() const { return styleOfSofa; }
     void setStyleOfSoda(const std::string& style) { styleOfSofa = style; }
 
-    bool getisConvertible() const { return sofaConvertible; }
-    void setConvertible(bool isConvertible) { sofaConvertible = isConvertible; }
+    bool getSofaConvertible() const { return sofaConvertible; }
+    void setSofaConvertible(bool isConvertible) { sofaConvertible = isConvertible; }
 
     std::string getSofaFrameMaterial() const { return sofaFrameMaterial; }
     void setSofaFrameMaterial(const std::string& frameMaterial) { sofaFrameMaterial = frameMaterial; }
