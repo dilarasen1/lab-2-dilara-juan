@@ -3,7 +3,7 @@
 #include "Chair.h"
 #include "Sofa.h"
 #include "Table.h"
-//#include "Shelf.h"
+#include "Shelf.h"
 #include <cassert>
 #include <iostream>
 #include <fstream>
