@@ -1,10 +1,9 @@
-// main.cpp
 #include "Furniture.h"
 #include <cassert>
 
 int main() {
     // Test 1: Create a Furniture object using the constructor
-    Furniture chair("Office Chair", 149.99, 10);
+    Furniture chair("Office Chair", 149.99, 10, "Seating", 10, 10);
     chair.display();
 
     // Test 2: Test getter methods
@@ -27,8 +26,8 @@ int main() {
     std::cout << "Setters passed." << std::endl;
 
     // Test 4: Test multiple Furniture objects
-    Furniture table("Dining Table", 299.99, 3);
-    Furniture sofa("Leather Sofa", 499.99, 2);
+    Furniture table("Dining Table", 299.99, 3, "Table", 10, 10);
+    Furniture sofa("Leather Sofa", 499.99, 2, "Seating", 10, 10);
 
     table.display();
     sofa.display();
@@ -41,7 +40,7 @@ int main() {
     }
 
     // Test 6: Dynamic Allocation and Cleanup
-    Furniture* dynamicChair = new Furniture("Gaming Chair", 249.99, 7);
+    Furniture* dynamicChair = new Furniture("Gaming Chair", 249.99, 7, "Seating", 10, 10);
     dynamicChair->display();
     delete dynamicChair;
     std::cout << "Dynamic allocation test passed." << std::endl;
