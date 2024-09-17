@@ -6,7 +6,8 @@ CXXFLAGS = -Wall -std=c++11
 TARGET = furniture_test
 
 # Object files
-OBJECTS = main.o
+# OBJECTS = main.o
+OBJECTS = LoadFurniture.o
 
 # Default target
 all: $(TARGET)
@@ -16,8 +17,10 @@ $(TARGET): $(OBJECTS)
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJECTS)
 
 # Compile main.cpp
-main.o: main.cpp Furniture.h Chair.h Table.h Sofa.h
-	$(CXX) $(CXXFLAGS) -c main.cpp
+#main.o: main.cpp Furniture.h Chair.h Table.h Sofa.h Shelf.h
+LoadFurniture.o: LoadFurniture.cpp Furniture.h Chair.h Table.h Sofa.h Shelf.h
+#	$(CXX) $(CXXFLAGS) -c main.cpp
+	$(CXX) $(CXXFLAGS) -c LoadFurniture.cpp
 
 # Clean up object files and executable
 clean:
