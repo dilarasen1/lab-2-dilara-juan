@@ -1,3 +1,6 @@
+#ifndef SHELF_H
+#define SHELF_H
+
 #include "Furniture.h"
 
 class Shelf : public Furniture {
@@ -11,8 +14,8 @@ private:
 
 public:
     // Constructor
-    Shelf(std::string n, double p, int q, int heights, bool inside, std::string material, double length, bool mounted)
-        : Furniture(n, p, q), numOfHeights(heights), insideAcabinet(inside), shelfMaterial(material), mountedToWall(mounted) {}
+    Shelf(std::string n, double p, int q, std::string cat, double h, double w, int heights, bool inside, std::string material, double length, bool mounted)
+        : Furniture(n, p, q, cat, h, w), numOfHeights(heights), insideAcabinet(inside), shelfMaterial(material), mountedToWall(mounted) {}
 
     //Getter and setter methods
     int getNumOfHeights() const { return numOfHeights; }
@@ -40,3 +43,5 @@ public:
         std::cout << "Is the shelf mounted to the wall: " << (mountedToWall ? "Yes" : "No") << std::endl;
     }
 };
+
+#endif
