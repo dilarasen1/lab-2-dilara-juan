@@ -1,3 +1,6 @@
+#ifndef BED_H
+#define BED_H
+
 #include "Furniture.h"
 
 class Bed : public Furniture {
@@ -11,8 +14,8 @@ private:
 
 public:
     // Constructor
-    Bed(std::string n, double p, int q, std::string size, std::string frameMaterial, std::string style, bool storage, std::string color)
-        : Furniture(n, p, q), bedSize(size), bedFrameMaterial(frameMaterial), bedStyle(style), bedStorage(storage), bedColor(color) {}
+    Bed(std::string n, double p, int q, std::string cat, double h, double w, std::string size, std::string frameMaterial, std::string style, bool storage, std::string color)
+        : Furniture(n, p, q, cat, h, w), bedSize(size), bedFrameMaterial(frameMaterial), bedStyle(style), bedStorage(storage), bedColor(color) {}
     
     // Getter and setter methods
     std::string getBedSize() const { return bedSize; }
@@ -40,3 +43,5 @@ public:
         std::cout << "Number of Seats: " << bedColor << std::endl;
     }
 };
+
+#endif
