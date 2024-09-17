@@ -1,3 +1,6 @@
+#ifndef CHAIR_H
+#define CHAIR_H
+
 #include "Furniture.h"
 
 class Chair : public Furniture {
@@ -10,8 +13,8 @@ private:
 
 public:
     // Constructor
-    Chair(std::string n, double p, int q, bool armrest, bool recline, std::string material, int numLegs)
-        : Furniture(n, p, q), hasArmrest(armrest), doesRecline(recline), chairMaterial(material), chairNumOfLegs(numLegs) {}
+    Chair(std::string n, double p, int q, std::string cat, double h, double w, bool armrest, bool recline, std::string material, int numLegs)
+        : Furniture(n, p, q, cat, h, w), hasArmrest(armrest), doesRecline(recline), chairMaterial(material), chairNumOfLegs(numLegs) {}
 
     //Getter and setter methods
     bool getHasArmrest() const { return hasArmrest; }
@@ -35,3 +38,5 @@ public:
         std::cout << "Number of chair legs: " << chairNumOfLegs << std::endl;
     }
 };
+
+#endif
