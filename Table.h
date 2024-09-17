@@ -1,3 +1,6 @@
+#ifndef TABLE_H
+#define TABLE_H
+
 #include "Furniture.h"
 
 class Table : public Furniture {
@@ -10,8 +13,8 @@ private:
 
 public:
     // Constructor
-    Table(std::string n, double p, int q, int legs, bool isFoldable, std::string material, int numOfChairs)
-        : Furniture(n, p, q), numOfTableLegs(legs), tableFoldable(isFoldable), tableMaterial(material), tableNumOfChairs(numOfChairs) {}
+    Table(std::string n, double p, int q, std::string cat, double h, double w, int legs, bool isFoldable, std::string material, int numOfChairs)
+        : Furniture(n, p, q, cat, h, w), numOfTableLegs(legs), tableFoldable(isFoldable), tableMaterial(material), tableNumOfChairs(numOfChairs) {}
 
     // Getter and setter methods
     int getNumOfTableLegs() const { return numOfTableLegs; }
@@ -35,3 +38,5 @@ public:
         std::cout << "Number of Chairs That Fit at Table: " << tableNumOfChairs << std::endl;
     }
 };
+
+#endif
