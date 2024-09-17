@@ -1,3 +1,6 @@
+#ifndef SOFA_H
+#define SOFA_H
+
 #include "Furniture.h"
 
 class Sofa : public Furniture {
@@ -10,8 +13,8 @@ private:
 
 public:
     // Constructor
-    Sofa(std::string n, double p, int q, int seats, std::string style, bool isConvertible, std::string frameMaterial)
-        : Furniture(n, p, q), numOfSofaSeats(seats), styleOfSofa(style), sofaConvertible(isConvertible), sofaFrameMaterial(frameMaterial) {}
+    Sofa(std::string n, double p, int q, std::string cat, double h, double w, int seats, std::string style, bool isConvertible, std::string frameMaterial)
+        : Furniture(n, p, q, cat, h, w), numOfSofaSeats(seats), styleOfSofa(style), sofaConvertible(isConvertible), sofaFrameMaterial(frameMaterial) {}
     
     // Getter and setter methods
     int getNumOfSofaSeats() const { return numOfSofaSeats; }
@@ -35,3 +38,5 @@ public:
         std::cout << "Sofa Frame Material: " << sofaFrameMaterial << std::endl;
     }
 };
+
+#endif
