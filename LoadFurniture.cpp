@@ -1,9 +1,12 @@
+// 
 #include "Furniture.h"
 #include "Bed.h"
 #include "Chair.h"
 #include "Sofa.h"
 #include "Table.h"
 #include "Shelf.h"
+
+// Standard headers
 #include <cassert>
 #include <iostream>
 #include <fstream>
